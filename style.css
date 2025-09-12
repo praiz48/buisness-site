@@ -1,0 +1,317 @@
+/* ========== Base Styles ========== */
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: linear-gradient(135deg, #0b1f3a 0%, #00c2a8 50%, #ffd166 100%);
+  color: #f5f7fa;
+  color: #1f2937; /* charcoal text */
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  margin: 0.5em 0;
+}
+
+p {
+  margin: 0.5em 0 1em;
+}
+
+/* ========== Header ========== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #0b1f3a; /* navy */
+  color: #ffffff;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #00c2a8; /* teal accent */
+}
+
+.nav-bar {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar a {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-bar a:hover {
+  color: #ffd166; /* yellow highlight */
+}
+
+.nav-bar button {
+  background-color: #ffd166;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #0b1f3a;
+  transition: background 0.2s ease;
+}
+
+.nav-bar button:hover {
+  background: #e6bc59;
+}
+
+/* ========== CTA ========== */
+.cta {
+  background: linear-gradient(135deg, #0b1f3a 0%, #00c2a8 50%, #ffd166 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+.swing-in-top-fwd {
+  -webkit-animation: swing-in-top-fwd 0.5s
+    cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+.cta h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta button {
+  background: #00c2a8;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.cta button:hover {
+  background: #009b88;
+}
+
+/* ========== About ========== */
+.about-us {
+  background: #ffffff;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-top: 4px solid #00c2a8;
+}
+
+.about-us h1 {
+  color: #0b1f3a;
+}
+
+.about-us a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #00c2a8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.about-us a:hover {
+  text-decoration: underline;
+}
+
+/* About-2 */
+.about-us-2 {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 3rem 2rem;
+  background: #0b1f3a;
+}
+
+.about-us-2 div {
+  background: #3f51b5;
+  color: #ffffff;
+  flex: 1;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+/* ========== Services ========== */
+.services {
+  padding: 3rem 2rem;
+}
+
+.services h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.service-dets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.service-dets div {
+  background: #0b1f3a;
+  color: #f5f7fa;
+  flex: 1 1 45%;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.service-dets h2 {
+  color: #00c2a8;
+}
+
+.service-extra {
+  margin-top: 2rem;
+  text-align: center;
+  font-weight: bold;
+  color: #00c2a8;
+}
+
+.service-extra span {
+  color: #ffd166;
+}
+
+/* ========== Pricing ========== */
+.pricing {
+  background: #f5f7fa;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.pricing ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  margin: 2rem 0 0;
+  justify-content: center;
+}
+
+.pricing li {
+  background: #3f51b5;
+  color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  flex: 1 1 250px;
+}
+
+/* ========== Team ========== */
+.our-team {
+  background: #ffffff;
+  padding: 3rem 2rem;
+}
+
+.our-team h3 {
+  text-align: center;
+}
+
+.our-team ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+}
+
+.our-team li {
+  background: #e5e7eb;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1 1 250px;
+}
+
+/* ========== Testimonials ========== */
+.testimonials {
+  background: #3f51b5;
+  color: #ffffff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.testimonials blockquote {
+  margin: 1rem auto;
+  max-width: 600px;
+  font-style: italic;
+}
+
+/* ========== Contact ========== */
+.contact {
+  background: #f5f7fa;
+  padding: 3rem 2rem;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact input,
+.contact textarea,
+.contact select {
+  padding: 0.6rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.contact button {
+  background: #00c2a8;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: #009b88;
+}
+
+/* ========== Footer ========== */
+footer {
+  background: #0b1f3a;
+  color: #f5f7fa;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 750px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-bar {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .service-dets {
+    flex-direction: column;
+  }
+
+  .pricing ul,
+  .our-team ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
