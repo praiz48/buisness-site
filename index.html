@@ -13,19 +13,20 @@
       </div>
       <ul class="nav-bar">
         <li>
-          <a href="#">Home</a>
+          <a href="#home">Home</a>
         </li>
         <li>
-          <a href="#">Service</a>
+          <a href="#service">Service</a>
         </li>
         <li>
-          <a href="#">projects</a>
+          <a href="#about-us">about us</a>
         </li>
         <li>
-          <a href="#">about us</a>
+          <a href="#pricing">pricing</a>
         </li>
+        
         <li>
-          <a href="#">Team</a>
+          <a href="#teams">Team</a>
         </li>
         <li>
           <button>join us</button>
@@ -35,21 +36,29 @@
     <hr />
     <main>
       <!-- cta secction -->
-      <section class="cta">
-        <h1 class=".swing-in-top-fwd">Build beautiful products faster</h1>
-        <p>
+      <section class="cta" id="home">
+       <div class="cta-content">
+         <h1 class=".swing-in-top-fwd">Build beautiful products faster</h1>
+        <h3>
           Design systems, landing pages, and micro-SaaS tools that creators actually use — built with empathy and shipped weekly.
-        </p>
+        </h3>
         <button>Get a prototype</button>
+       </div>
       </section>
       <!-- about us section -->
-      <section class="about-us">
-        <div>About US</div>
+      <section class="about-us-main" id="about-us" >
+        <div class="about-us">
+          <h4>About US</h4>
         <h1>We build products creators love<h1>
         <div>
          Lumenly is a small team of designers and engineers who believe great product design shouldn’t be slow or expensive. We pair pragmatic engineering with human-centered design to turn ideas into polished, usable products. From landing pages to micro-SaaS features, we help creators validate faster and ship with confidence.
         </div>
         <a>See our work</a>
+        </div>
+        
+        <div  class="about-img">
+          <img src="/bg-images/green workspace.jpg" alt="about-image" height="500px" width="450px">
+        </div>
       </section>
       <!-- about us 2 section -->
       <section class="about-us-2">
@@ -68,7 +77,7 @@
         </div>
       </section>
       <!-- Services section  -->
-      <section class="services">
+      <section class="services" id="service">
         <h3>How We work</h3>
         <div class="service-dets">
           <div>
@@ -117,7 +126,7 @@
         </div>
       </section>
       <!-- pricing section -->
-      <section class="pricing">
+      <section class="pricing" id="pricing">
         <h3>Pricing</h3>
 
           <ul>
@@ -127,7 +136,7 @@
           </ul>
       </section>
       <!-- team section -->
-      <section class="our-team">
+      <section class="our-team" id="teams">
         <h3>Our Team</h3>
         <div>
           <ul>
@@ -139,7 +148,6 @@ Full-stack developer with a passion for building user-friendly applications. Exp
 Creative designer focused on crafting visually appealing and functional user interfaces. Strong background in UX/UI design.</li>
           </ul>
         </div>
-        <a>See our work</a>
       </section>
       <!-- testimonials section -->
       <section class="testimonials">

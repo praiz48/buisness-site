@@ -7,7 +7,9 @@ body {
   color: #1f2937; /* charcoal text */
   line-height: 1.6;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 h1,
 h2,
 h3,
@@ -22,12 +24,15 @@ p {
 
 /* ========== Header ========== */
 header {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background: #0b1f3a; /* navy */
   color: #ffffff;
+  z-index: 10;
 }
 
 header h1 {
@@ -71,32 +76,53 @@ header h1 {
 
 /* ========== CTA ========== */
 .cta {
-  background: linear-gradient(135deg, #0b1f3a 0%, #00c2a8 50%, #ffd166 100%);
-  color: #ffffff;
+  background: url("/bg-images/5757453.jpg"), no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white;
   text-align: center;
-  padding: 5rem 2rem;
+  /* padding: 5rem 2rem; */
+  margin: 0;
 }
 .swing-in-top-fwd {
   -webkit-animation: swing-in-top-fwd 0.5s
     cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
   animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
+.cta-content {
+  background-color: #0b1f3ad7;
+  height: 100%;
+  /* padding-top: 5em; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 
+  /* text-align: center; */
+}
 .cta h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
 
+  /* margin-bottom: 1rem; */
+}
+.cta h3 {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 .cta button {
   background: #00c2a8;
+  /* text-align: center; */
   color: #ffffff;
   border: none;
   border-radius: 6px;
   padding: 0.8rem 1.5rem;
+  justify-self: center;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s ease;
+  width: 10em;
+  align-self: center;
 }
 
 .cta button:hover {
@@ -104,11 +130,19 @@ header h1 {
 }
 
 /* ========== About ========== */
+.about-us-main {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(white, #0b1f3a);
+  padding: 3rem 3rem;
+}
 .about-us {
-  background: #ffffff;
-  padding: 3rem 2rem;
-  text-align: center;
+  text-align: left;
   border-top: 4px solid #00c2a8;
+  div {
+    font-size: 0.7em;
+    width: 69%;
+  }
 }
 
 .about-us h1 {
@@ -116,15 +150,31 @@ header h1 {
 }
 
 .about-us a {
-  display: inline-block;
-  margin-top: 1rem;
-  color: #00c2a8;
-  font-weight: 600;
   text-decoration: none;
+  background: #00c2a8;
+  /* text-align: center; */
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+  justify-self: center;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  width: 10em;
+  align-self: center;
 }
 
 .about-us a:hover {
   text-decoration: underline;
+}
+.about-img {
+  width: 50%;
+  height: 50%;
+  img {
+    border-radius: 10%;
+  }
 }
 
 /* About-2 */
@@ -147,6 +197,8 @@ header h1 {
 /* ========== Services ========== */
 .services {
   padding: 3rem 2rem;
+  background: url("/bg-images/4884273.jpg");
+  background-size: cover;
 }
 
 .services h3 {
@@ -185,7 +237,7 @@ header h1 {
 
 /* ========== Pricing ========== */
 .pricing {
-  background: #f5f7fa;
+  /* background: #f5f7fa; */
   padding: 3rem 2rem;
   text-align: center;
 }
@@ -210,7 +262,8 @@ header h1 {
 
 /* ========== Team ========== */
 .our-team {
-  background: #ffffff;
+  background: url("/bg-images/team\ bg.jpg") no-repeat;
+  background-size: cover;
   padding: 3rem 2rem;
 }
 
@@ -249,8 +302,10 @@ header h1 {
 
 /* ========== Contact ========== */
 .contact {
-  background: #f5f7fa;
+  background: url("/bg-images/bg-2.jpg") no-repeat;
+  background-size: cover;
   padding: 3rem 2rem;
+  color: white;
 }
 
 .contact form {
