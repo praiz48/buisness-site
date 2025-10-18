@@ -47,6 +47,9 @@ header h1 {
   margin: 0;
   padding: 0;
 }
+.menu-toggle {
+  display: none;
+}
 
 .nav-bar a {
   color: #ffffff;
@@ -89,6 +92,7 @@ header h1 {
 .cta {
   background: url("/bg-images/5757453.jpg"), no-repeat;
   background-size: cover;
+  background-position: center;
   height: 100vh;
   color: white;
   text-align: center;
@@ -156,23 +160,24 @@ header h1 {
   justify-content: space-between;
   background: linear-gradient(white, #0b1f3a);
   padding: 3rem 3rem;
+  margin: 0;
 }
 .about-us {
   text-align: left;
   border-top: 4px solid #00c2a8;
 }
 .about-us h5 {
-  /* color: #00c2a8; */
-  /* font-weight: 600; */
-  font-size: 1.7em;
-  line-height: 1.5em;
+  font-size: 1.5em;
   width: 70%;
-
-  /* margin-bottom: 0.5rem; */
+  height: 70%;
+  /* padding: 20px; */
+  margin: 0;
+  margin-bottom: 2em;
 }
 
 .about-us h1 {
   color: #0b1f3a;
+  padding-bottom: 0;
 }
 
 .about-us a {
@@ -230,6 +235,7 @@ header h1 {
 .services h3 {
   text-align: center;
   margin-bottom: 2rem;
+  color: #009b88;
 }
 
 .service-dets {
@@ -470,22 +476,145 @@ footer {
   header {
     flex-direction: column;
     align-items: flex-start;
+    position: relative;
   }
 
+  /* The main circular menu button */
+  .menu-toggle {
+    position: fixed;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background: #0b1f3a;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+  }
+
+  .menu-toggle:hover {
+    background: #102b58;
+  }
+
+  /* Nav container centered around toggle */
   .nav-bar {
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-top: 0.5rem;
+    position: fixed;
+    top: 50%;
+    right: 80px; /* offset a little to sit behind the button */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    transform: translateY(-50%);
   }
 
-  .service-dets {
+  .nav-bar li {
+    position: absolute;
+    transform: translate(0, 0);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.4s ease;
+  }
+
+  .nav-bar a {
+    display: inline-block;
+    background: #0b1f3a;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #00c2a8;
+    padding: 0.7rem 1rem;
+    /* margin: 0.2rem; */
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+  }
+
+  .nav-bar a:hover,
+  .nav-bar button:hover {
+    background: #143d73;
+  }
+
+  /* Active state - fan out to the LEFT in a semi-circle */
+  .nav-bar.active {
+    pointer-events: all;
+  }
+
+  .nav-bar.active li {
+    opacity: 1;
+  }
+
+  /* Adjust these values to control the curve spread */
+  .nav-bar.active li:nth-child(1) {
+    transform: translate(-120px, 10px); /* directly left */
+  }
+
+  .nav-bar.active li:nth-child(2) {
+    transform: translate(-95px, -70px); /* upper-left */
+  }
+
+  .nav-bar.active li:nth-child(3) {
+    transform: translate(-0px, -90px); /* top-left */
+  }
+
+  .nav-bar.active li:nth-child(4) {
+    transform: translate(0px, 90px); /* bottom-left */
+  }
+
+  .nav-bar.active li:nth-child(5) {
+    transform: translate(-95px, 70px); /* lower-left */
+  }
+
+  .nav-bar.active li:nth-child(6) {
+    transform: translate(60px, 0); /* far left */
+  }
+
+  /* ========== About ========== */
+  .about-us-main {
     flex-direction: column;
+    justify-content: baseline;
+  }
+  .about-us {
+    text-align: center;
+    height: 50vh;
+  }
+  .about-us h5 {
+    font-size: 1em;
+    width: 100%;
+  }
+
+  .about-img {
+    margin-top: 170px;
+    img {
+      padding-top: 1.5em;
+      border-radius: 10%;
+      height: 70%;
+      width: 80vw;
+    }
+  }
+
+  /* About-2 */
+  .about-us-2 {
+    margin-top: 80px;
+    margin-bottom: 1px;
   }
 
   .pricing ul,
   .our-team ul {
     flex-direction: column;
     align-items: center;
+    font-size: 1.7em;
   }
 }
 @-webkit-keyframes slide-in-blurred-bottom {

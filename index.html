@@ -11,7 +11,13 @@
       <div>
         <h1>Lumenly</h1>
       </div>
-      <ul class="nav-bar">
+      <div
+        class="menu-toggle"
+        onclick="document.querySelector('.nav-bar').classList.toggle('active')"
+      >
+        ☰
+      </div>
+      <ul id="nav-bar" class="nav-bar">
         <li>
           <a href="#home">Home</a>
         </li>
